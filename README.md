@@ -10,6 +10,6 @@ Service Background GPS it's been optimized battery
 
 Webservices
 
--NodeJS
--Firebase Database for realtime
+- NodeJS
+- Firebase Database for realtime
 
