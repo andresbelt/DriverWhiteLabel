@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fED100</color>
+    <color name="colorPrimaryDark">#FFC107</color>
+    <color name="colorAccent">#FFEA00</color>
+    <color name="primaryLight">#FFFF8D</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackLucid">#9e000000</color>
+    <color name="colorBlackViews">#0e1421</color>
+    <color name="colorBlackLight">#3D446F</color>
+
+    <color name="colorGreen">#FF009180</color>
+    <color name="colorGreenLight">#8d009180</color>
+    <color name="colorCancel">#feff2027</color>
+    <color name="colorCancelLight">#8d910002</color>
+
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+</resources>

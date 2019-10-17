@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">RTaxiDriver</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_driver_map">Map</string>
+
+    <string name="lbl_user">Usuario</string>
+    <string name="lbl_password">Contraseña</string>
+    <string name="but_login">Login</string>
+
+    <string name="lbl_data_user">WNS109</string>
+    <string name="lbl_data_pass">80053743</string>
+
+    <string name="lbl_name_client">Deimer Villa Pedraza</string>
+    <string name="lbl_confirm">Confirmar</string>
+
+</resources>
