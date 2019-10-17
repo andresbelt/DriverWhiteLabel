@@ -6,40 +6,230 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".view.map.DriverMapActivity">
+>
 
     <android.support.v7.widget.CardView
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay"
-        app:cardBackgroundColor="@color/colorBlackLucid"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="6dp">
+        app:cardBackgroundColor="@color/azul_parte_sup">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
     </android.support.v7.widget.CardView>
-    <!-- Content Activity -->
-    <include layout="@layout/content_driver_map" />
     <!-- Bottom Sheet -->
-    <include layout="@layout/bottom_sheet_petition" />
-    <!-- Fab Button -->
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_my_position"
-        app:backgroundTint="@color/colorPrimaryDark"
-        app:fabSize="normal"
-        app:layout_anchor="@id/layout_sheet"
-        app:layout_anchorGravity="top|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_gps"
-        android:scaleType="centerInside"
-        android:layout_width="wrap_content"
+    <!-- Content Activity -->
+
+    <include layout="@layout/content_driver_map" />
+
+
+    <include
+        layout="@layout/bottom_sheet_career"
+ />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end" />
+    >
+        <!-- Content Activity -->
+
+        <LinearLayout
+            android:id="@+id/content_info_driver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/fondo_boton_en_reposo"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="En reposo"
+                    android:textColor="@color/colorBlack" />
+
+                <Switch
+                    android:id="@+id/btn_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColorLink="@color/azul_btn_carrer"
+                    app:layout_anchor="@+id/cardView"
+                    app:layout_anchorGravity="right|bottom" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="En linea"
+                    android:textColor="@color/azul_btn_carrer" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/fondo_user_copia"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/nombre_conductor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="TEXT"
+                        android:textColor="@color/azul_btn_carrer" />
+
+                    <TextView
+                        android:id="@+id/placa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="5dp"
+                            android:text="5"
+                            android:textColor="@color/colorBlack" />
+
+                        <co.com.autolagos.rtaxi.local.driver.view.ColorRatingBar
+                            android:id="@+id/rating_1"
+                            style="?android:ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:rating="5"
+
+                            app:empty_color="@color/azul_parte_sup"
+                            app:progress_color="@color/azul_btn_carrer" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <co.com.autolagos.rtaxi.local.driver.view.ViewGpsPermision
+            android:id="@+id/content_alert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#80000000"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone">
+
+        </co.com.autolagos.rtaxi.local.driver.view.ViewGpsPermision>
+
+        <FrameLayout
+            android:id="@+id/content_gps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/content_info_driver"
+            android:layout_alignParentStart="true"
+            app:layout_anchor="@+id/content_info_driver"
+            app:layout_anchorGravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_my_position2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerInside"
+
+                    android:src="@drawable/boton_panico"
+                    app:backgroundTint="@color/color_white"
+                    app:fabSize="mini" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_my_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+
+                    android:scaleType="centerInside"
+                    android:src="@drawable/centrar_en_mapa"
+                    app:backgroundTint="@color/color_white"
+                    app:fabSize="mini" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/circular_loaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="5dp"
+                android:src="@drawable/fotoperfil"
+
+
+                app:layout_anchor="@id/card_sheet"
+                app:layout_anchorGravity="center|top" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <!-- Content Activity -->
+    <!-- Bottom Sheet -->
+    <!-- Fab Button -->
 
 </android.support.design.widget.CoordinatorLayout>

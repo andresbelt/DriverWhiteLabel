@@ -1,8 +1,9 @@
 package co.com.autolagos.rtaxi.local.driver.presenter.login;
 
+import co.com.autolagos.rtaxi.local.driver.datastorage.FirebaseDataStore;
 import co.com.autolagos.rtaxi.local.driver.model.entities.BodyLogin;
 import co.com.autolagos.rtaxi.local.driver.model.entities.Driver;
-import co.com.autolagos.rtaxi.local.driver.model.services.data.remote.login.RetrofitLoginAdapter;
+import co.com.autolagos.rtaxi.local.driver.model.services.data.login.RetrofitLoginAdapter;
 import co.com.autolagos.rtaxi.local.driver.view.login.network.LoginInterface;
 
 public class LoginPresenterImpl implements LoginPresenter {
@@ -15,7 +16,7 @@ public class LoginPresenterImpl implements LoginPresenter {
 
     @Override
     public void login(BodyLogin body) {
-        RetrofitLoginAdapter loginAdapter = new RetrofitLoginAdapter(this);
+        RetrofitLoginAdapter loginAdapter = new RetrofitLoginAdapter(this,new FirebaseDataStore());
         loginAdapter.login(body);
     }
 

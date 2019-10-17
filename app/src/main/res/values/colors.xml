@@ -12,11 +12,22 @@
 
     <color name="colorGreen">#FF009180</color>
     <color name="colorGreenLight">#8d009180</color>
-    <color name="colorCancel">#feff2027</color>
+    <color name="colorBlue">#45a5bf</color>
+    <color name="colorBlueLight">#9c45a5bf</color>
+    <color name="colorCancel">#fea31d21</color>
     <color name="colorCancelLight">#8d910002</color>
 
     <color name="primaryText">#212121</color>
     <color name="secondaryText">#757575</color>
     <color name="icons">#FFFFFF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="iconsLucid">#75ffffff</color>
     <color name="divider">#BDBDBD</color>
+
+
+    <color name="azul_btn_carrer">#2a56c6</color>
+    <color name="azul_parte_sup">#C5C5C5</color>
+    <color name="azul_parte_inf">#F6F6F6</color>
+
+
 </resources>

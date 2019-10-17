@@ -14,4 +14,67 @@
     <string name="lbl_name_client">Deimer Villa Pedraza</string>
     <string name="lbl_confirm">Confirmar</string>
 
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="ok">OK</string>
+
+    <string name="request_updates">Request updates</string>
+    <string name="remove_updates">Remove updates</string>
+    <string name="unknown_location">Unknown location</string>
+
+    <string name="batched_location_updates">Batched location updates</string>
+
+    <plurals name="num_locations_reported">
+        <item quantity="zero">No location reported</item>
+        <item quantity="one">One location reported</item>
+        <item quantity="other">%d locations reported</item>
+    </plurals>
+
+    <string name="default_channel">Default channel</string>
+
+
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="launch_activity">Open</string>
+    <string name="remove_location_updates">Salir</string>
+
+    <!--pantalla carrera-->
+    <string name="aceptar">Aceptar carrera</string>
+    <string name="yallegue">Ya llegue</string>
+
+    <string name="iniciarca">Iniciar carrera</string>
+    <string name="rechazar">Rechazar</string>
+
+
+    <!--menu_perfil-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="mi_perfil">Mi perfil</string>
+    <string name="mis_viajes">Mis viajes</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="compartir">Compartir</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="faq">FAQ</string>
+    <string name="location_updated">Location Updated: %1$s</string>
+
+
+    <string name="isOnline">Online</string>
+    <string name="isOffline">Offline</string>
+    <string name="API_KEY">AIzaSyDIyjX7ppn6DpQORxE_Y0SLx3DCNhh1f9Q</string>
+    <string name="networkconnect">Internet disponible</string>
+    <string name="networkdisconnet">Revisa tu conexion</string>
+    <string name="startcareer">Comenzar carrera</string>
+    <string name="finishcareer">Finalizar carrera</string>
+    <string name="intentelo">Intentelo de nuevo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="califica">Califica a:</string>
+    <string name="coment">Escriba un comentario</string>
+    <string name="cobro_en">Cobro en Efectivo</string>
+    <string name="tomar_pago">Cerrar</string>
+
+
 </resources>

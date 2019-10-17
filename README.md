@@ -1,2 +1,0 @@
-# DriverWhiteLabel
-Example app driver

@@ -2,37 +2,38 @@ package co.com.autolagos.rtaxi.local.driver.model.entities;
 
 public class Coordinate {
 
-    private double latitude;
-    private double longitude;
+    private double lat;
+    private double lon;
 
     public Coordinate() {}
-    public Coordinate(double latitude, double longitude) {
-        this.latitude = latitude;
-        this.longitude = longitude;
+    public Coordinate(double lat, double lon) {
+        this.lat = lat;
+        this.lon = lon;
+
     }
 
     //Getters
-    public double getLatitude() {
-        return latitude;
+    public double getLat() {
+        return lat;
     }
-    public double getLongitude() {
-        return longitude;
+    public double getLon() {
+        return lon;
     }
 
     //Setters
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
+    public void setLat(double latitude) {
+        this.lat = latitude;
     }
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
+    public void setLon(double longitude) {
+        this.lon = longitude;
     }
 
     //ToString
     @Override
     public String toString() {
         return "Coordinate{" +
-                "latitude=" + latitude +
-                ", longitude=" + longitude +
+                "lat=" + lat +
+                ", lon=" + lon +
                 '}';
     }
 }

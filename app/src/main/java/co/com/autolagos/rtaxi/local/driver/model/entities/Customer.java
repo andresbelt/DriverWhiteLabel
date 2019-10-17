@@ -7,17 +7,15 @@ public class Customer {
     private String avatar;
     private String thumbnail;
     private float score;
-    private Journey journey;
     private int state;
 
     public Customer() {}
-    public Customer(String uid, String name, String avatar, String thumbnail, float score, Journey journey, int state) {
+    public Customer(String uid, String name, String avatar, String thumbnail, float score, int state) {
         this.uid = uid;
         this.name = name;
         this.avatar = avatar;
         this.thumbnail = thumbnail;
         this.score = score;
-        this.journey = journey;
         this.state = state;
     }
 
@@ -37,9 +35,7 @@ public class Customer {
     public float getScore() {
         return score;
     }
-    public Journey getJourney() {
-        return journey;
-    }
+
     public int getState() {
         return state;
     }
@@ -59,9 +55,6 @@ public class Customer {
     }
     public void setScore(float score) {
         this.score = score;
-    }
-    public void setJourney(Journey journey) {
-        this.journey = journey;
     }
     public void setState(int state) {
         this.state = state;

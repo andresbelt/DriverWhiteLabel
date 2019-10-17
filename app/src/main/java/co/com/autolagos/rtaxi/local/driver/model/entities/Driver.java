@@ -10,14 +10,30 @@ public class Driver {
     private String departmentCode;
     private String departmentName;
     private String limitDateRTM;
+    private String placa;
     private String companyName;
     private String limitDateLicense;
     private String categoryLicense;
     private String qualification;
     private String token;
+    private Coordinate coordinate;
+    private String customerId;
 
     public Driver() {}
-    public Driver(String userId, String fullName, String departmentCode, String departmentName, String limitDateRTM, String companyName, String limitDateLicense, String categoryLicense, String qualification, String token) {
+    public Driver(String userId,
+                  String fullName,
+                  String placa,
+                  String departmentCode,
+                  String departmentName,
+                  String limitDateRTM,
+                  String companyName,
+                  String limitDateLicense,
+                  String categoryLicense,
+                  String qualification,
+                  String token,
+                  Coordinate coordinate,
+                  String customerId) {
+        
         this.userId = userId;
         this.fullName = fullName;
         this.departmentCode = departmentCode;
@@ -28,6 +44,9 @@ public class Driver {
         this.categoryLicense = categoryLicense;
         this.qualification = qualification;
         this.token = token;
+        this.coordinate = coordinate;
+        this.customerId = customerId;
+        this.placa = placa;
     }
 
     //region Getters
@@ -61,9 +80,24 @@ public class Driver {
     public String getToken() {
         return token;
     }
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
+    public String getCustomerId() {
+        return customerId;
+    }
+    public String getPlaca() {
+        return placa;
+    }
     //endregion
 
     //region Setters
+
+
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
     public void setUserId(String userId) {
         this.userId = userId;
     }
@@ -94,6 +128,12 @@ public class Driver {
     public void setToken(String token) {
         this.token = token;
     }
+    public void setCoordinate(Coordinate coordinate) {
+        this.coordinate = coordinate;
+    }
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
     //endregion
 
     @Override
@@ -109,6 +149,9 @@ public class Driver {
                 ", categoryLicense='" + categoryLicense + '\'' +
                 ", qualification='" + qualification + '\'' +
                 ", token='" + token + '\'' +
+                ", coordinate=" + coordinate +
+                ", customerId='" + customerId + '\'' +
+                ", placa='" + placa + '\'' +
                 '}';
     }
 }
