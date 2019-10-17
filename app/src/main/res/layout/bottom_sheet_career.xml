@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_sheet"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="0dp">
+
+    <com.mikhaellopez.circularfillableloaders.CircularFillableLoaders
+        android:id="@+id/circular_loaders"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:elevation="5dp"
+        android:src="@drawable/ic_man"
+        app:cfl_border="true"
+        app:cfl_border_width="2dp"
+        app:cfl_wave_amplitude="0.06"
+        app:cfl_wave_color="@color/azul_btn_carrer"
+        app:layout_anchor="@id/card_sheet"
+        app:layout_anchorGravity="center|top" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_card_petition"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="16dp"
+                tools:ignore="UselessParent">+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:foregroundGravity="right"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:foregroundGravity="center"
+                        android:gravity="center"
+                        android:text="4.5"
+                        android:textColor="@color/azul_btn_carrer"
+                        android:textSize="16sp" />
+
+                    <co.com.autolagos.rtaxi.local.driver.view.ColorRatingBar
+                        android:id="@+id/rating_1"
+                        style="?android:ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rating="4.5"
+                        app:empty_color="@color/azul_parte_sup"
+                        app:progress_color="@color/azul_btn_carrer" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/distancia" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lbl_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="4 Min"
+                            android:textColor="@color/azul_btn_carrer"
+                            android:textSize="18sp"
+                            tools:ignore="RelativeOverlap" />
+
+                        <TextView
+                            android:id="@+id/lbl_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="800 m"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/lbl_name_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/lbl_name_client"
+                android:textAlignment="center"
+                android:textColor="@color/azul_btn_carrer"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:orientation="horizontal">
+
+                <com.ncorti.slidetoact.SlideToActView
+                    android:id="@+id/btn_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="0dp"
+                    app:area_margin="4dp"
+                    app:border_radius="1dp"
+                    app:inner_color="@color/azul_btn_carrer"
+                    app:outer_color="@color/white"
+                    app:slider_locked="false"
+                    app:text="@string/aceptar"
+                    app:text_color="@color/azul_btn_carrer" />
+
+                <LinearLayout
+                    android:id="@+id/cancelar_career"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorCancel"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:text="@string/rechazar"
+                        android:textColor="@color/color_white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_cancel"
+                    app:backgroundTint="@color/colorCancel"
+                    app:fabSize="normal" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/lbl_confirm"
+                    android:textAlignment="center"
+                    android:textColor="@color/icons"
+                    android:textSize="18sp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_career"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_checked"
+                    app:backgroundTint="@color/colorGreen"
+                    app:fabSize="normal" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_careerpickupuser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_checked"
+                    app:backgroundTint="@color/colorBlue"
+                    app:fabSize="normal" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_careerbegin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_checked"
+                    app:backgroundTint="@color/colorAccent"
+                    app:fabSize="normal" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_checked"
+                    app:backgroundTint="@color/colorCancel"
+                    app:fabSize="normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.design.widget.CoordinatorLayout>
