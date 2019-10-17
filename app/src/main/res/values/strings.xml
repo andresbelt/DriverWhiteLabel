@@ -62,7 +62,7 @@
 
     <string name="isOnline">Online</string>
     <string name="isOffline">Offline</string>
-    <string name="API_KEY">AIzaSyDIyjX7ppn6DpQORxE_Y0SLx3DCNhh1f9Q</string>
+    <string name="API_KEY">KEY_HERE</string>
     <string name="networkconnect">Internet disponible</string>
     <string name="networkdisconnet">Revisa tu conexion</string>
     <string name="startcareer">Comenzar carrera</string>
